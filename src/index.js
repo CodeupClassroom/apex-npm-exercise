@@ -6,6 +6,8 @@ const keys = require("./keys");
 // connect the math.js file with this procedure
 import ferMath from './math';
 
+import API from './api';
+
 console.log(keys);
 
 const person = { firstname: 'douglas' };
@@ -19,5 +21,7 @@ $(document).ready(()=>{
 
     console.log('math.add',ferMath.add(5, 8));
     console.log('math.divide',ferMath.divide(50, 10));
+
+    API.postReview();
 
 });
