@@ -1,22 +1,19 @@
 const reviewData = {
-    "restaurant_id": 1,
-    "name": "Fernando",
-    "rating": 3,
-    "comments": "It was fine"
+    "restaurant_id": 2,
+    "name": "Stacy",
+    "rating": 5,
+    "comments": "It was awesome"
 }
 
-const options = {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(reviewData),
-};
-
 const API = {
-    url: "https://frest.glitch.me/reviews",
-    createReview: options => {
-        fetch(this.url, options)
+    createReview: () => {
+        fetch("https://frest.glitch.me/reviews", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(reviewData),
+        })
             .then( response => response.json() )
             .then( data => console.log(data) )
             .catch( error => console.error(error));
