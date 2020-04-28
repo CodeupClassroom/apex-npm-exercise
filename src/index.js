@@ -3,6 +3,8 @@ const $ = require('jquery');
 // connect the keys local file into this js file
 const keys = require("./keys");
 
+const API = require('./api');
+
 // connect the math.js file with this procedure
 import ferMath from './math';
 
@@ -19,5 +21,7 @@ $(document).ready(()=>{
 
     console.log('math.add',ferMath.add(5, 8));
     console.log('math.divide',ferMath.divide(50, 10));
+
+    API.createReview();
 
 });
